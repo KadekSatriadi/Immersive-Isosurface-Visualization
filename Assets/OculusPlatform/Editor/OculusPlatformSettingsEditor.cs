@@ -101,7 +101,7 @@ namespace Oculus.Platform
           }
 
           PlayerSettings.virtualRealitySupported = MakeToggle(new GUIContent("Virtual Reality Support"), PlayerSettings.virtualRealitySupported);
-          PlayerSettings.bundleIdentifier = MakeTextBox(new GUIContent("Bundle Identifier"), PlayerSettings.bundleIdentifier);
+          PlayerSettings.applicationIdentifier = MakeTextBox(new GUIContent("Bundle Identifier"), PlayerSettings.applicationIdentifier);
           PlayerSettings.bundleVersion = MakeTextBox(new GUIContent("Bundle Version"), PlayerSettings.bundleVersion);
         });
       }

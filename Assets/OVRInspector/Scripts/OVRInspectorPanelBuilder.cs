@@ -50,7 +50,7 @@ public class OVRInspectorPanelBuilder
         buttonList = new List<Button>();
         this.panel = panel;
 
-        Transform scrollingContentTransform = panel.transform.FindChild("PanelContent");
+        Transform scrollingContentTransform = panel.transform.Find("PanelContent");
         if (scrollingContentTransform != null)
         {
             buttonPanel = scrollingContent = scrollingContentTransform.gameObject;

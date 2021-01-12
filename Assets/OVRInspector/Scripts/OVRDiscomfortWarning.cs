@@ -64,13 +64,13 @@ public class OVRDiscomfortWarning : MonoBehaviour {
 
     void Start()
     {
-        warningPanel = transform.FindChild("Canvas/WarningPanel").gameObject;
+        warningPanel = transform.Find("Canvas/WarningPanel").gameObject;
         if (!warningPanel)
         {
             Debug.LogError("Couldn't find WarningPanel");
         }
         
-        Transform messageGameObject = transform.FindChild("Canvas/WarningPanel/MessageText");
+        Transform messageGameObject = transform.Find("Canvas/WarningPanel/MessageText");
         if (messageGameObject)
         {
             messageText = messageGameObject.GetComponent<Text>();

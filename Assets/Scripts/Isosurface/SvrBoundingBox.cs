@@ -217,7 +217,7 @@ public class SvrBoundingBox : MonoBehaviour {
 		line1.widthMultiplier = linewidth;
 		line1.numCornerVertices = 90;
 		line1.material = mat;
-		line1.numPositions = 32;
+		line1.positionCount = 32;
 		line1.SetPosition (0, a);
 		line1.SetPosition (1,b);
 		line1.SetPosition (2,b);

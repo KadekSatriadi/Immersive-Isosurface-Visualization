@@ -305,13 +305,13 @@ public class OVRInspector : MonoBehaviour
       
 
         // Setup canvas and canvas panel builders 
-        canvas = transform.FindChild("Canvas").gameObject;
+        canvas = transform.Find("Canvas").gameObject;
 
-        leftPanel = new OVRInspectorPanelBuilder(canvas.transform.FindChild("LeftPanel").gameObject);
-        rightPanel = new OVRInspectorPanelBuilder(canvas.transform.FindChild("RightPanel").gameObject);
-        centerPanel = new OVRInspectorPanelBuilder(canvas.transform.FindChild("CenterPanel").gameObject);
+        leftPanel = new OVRInspectorPanelBuilder(canvas.transform.Find("LeftPanel").gameObject);
+        rightPanel = new OVRInspectorPanelBuilder(canvas.transform.Find("RightPanel").gameObject);
+        centerPanel = new OVRInspectorPanelBuilder(canvas.transform.Find("CenterPanel").gameObject);
 
-        docsPanel = rightPanel.panel.transform.FindChild("DocsPanel").gameObject;
+        docsPanel = rightPanel.panel.transform.Find("DocsPanel").gameObject;
         controlsPanel = centerPanel;
         docsPanelText = docsPanel.GetComponentInChildren<Text>();
         docsScroller = docsPanel.GetComponentInChildren<OVRGazeScroller>();
@@ -430,8 +430,8 @@ public class OVRInspector : MonoBehaviour
 
         if (cameraRig)
         {
-            Transform t = cameraRig.transform.FindChild("TrackingSpace");
-            centerEyeTransform = t.FindChild("CenterEyeAnchor");
+            Transform t = cameraRig.transform.Find("TrackingSpace");
+            centerEyeTransform = t.Find("CenterEyeAnchor");
         }
 
         manager = FindObjectOfType<OVRManager>();

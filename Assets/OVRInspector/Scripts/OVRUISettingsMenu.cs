@@ -31,7 +31,7 @@ public class OVRUISettingsMenu : MonoBehaviour {
 	void Start () {
         Transform uiSettingsPanel = transform;
 
-        fadeModeSliderLabel = uiSettingsPanel.FindChild("FadeMode/ValueText").GetComponent<Text>();
+        fadeModeSliderLabel = uiSettingsPanel.Find("FadeMode/ValueText").GetComponent<Text>();
         
 	}
     public void SetUIFadeLevel(float f)

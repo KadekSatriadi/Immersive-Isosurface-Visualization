@@ -187,7 +187,7 @@ public class SvrConfiguration : MonoBehaviour {
 		string filePathData = System.IO.Path.Combine (boundcodepath,   System.DateTime.Today.ToString("d").Replace("/","") + "_"+ System.DateTime.Now.Second.ToString () + ".json");
 
 		GameObject.FindObjectOfType<Svr3DPointer> ().pointer.gameObject.SetActive (false);
-		Application.CaptureScreenshot (filePathImage,5);
+		ScreenCapture.CaptureScreenshot (filePathImage,5);
 		Debug.Log ("Screen captured " + filePathImage);
 		System.IO.File.WriteAllText (@filePathData, data);
 		GameObject.FindObjectOfType<SvrAudioControl> ().PlayAudioCaptured ();

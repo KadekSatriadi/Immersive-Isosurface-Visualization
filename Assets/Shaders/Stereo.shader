@@ -1,4 +1,6 @@
-﻿Shader "Monash/Stereo"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Monash/Stereo"
 {
 	Properties
 	{
@@ -35,7 +37,7 @@
 			{
 				v2f o;
 				o.rawVert = v.vertex;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = v.uv;
 				return o;
 			}

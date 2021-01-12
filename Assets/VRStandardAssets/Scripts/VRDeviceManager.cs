@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.VR;
+using UnityEngine.XR;
 
 namespace VRStandardAssets.Utils
 {
@@ -44,22 +45,8 @@ namespace VRStandardAssets.Utils
         }
 
 
-        private void SetupVR ()
+        private void SetupVR()
         {
-            //Gear VR does not currently support renderScale
-#if !UNITY_ANDROID
-            VRSettings.renderScale = m_RenderScale;
-#endif
-
-#if UNITY_STANDALONE
-            VRSettings.loadedDevice = VRDeviceType.Oculus;
-#endif
-            
-#if UNITY_PS4 && !UNITY_EDITOR
-		    VRSettings.loadedDevice = VRDeviceType.Morpheus;
-#endif
-
-            VRSettings.enabled = true;
         }
     }
 }
